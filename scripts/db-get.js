@@ -16,7 +16,7 @@ async function main() {
   await db.connect();
 
   const { rows } = await db.query(
-    `SELECT "fileName", code, "transcriptionText" FROM public."Transcribation" WHERE id = $1`,
+    `SELECT name, code, transcription_text FROM public."transcription" WHERE id = $1`,
     [id]
   );
 
